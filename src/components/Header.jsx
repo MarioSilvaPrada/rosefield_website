@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ORANGE } from '../config/styles';
-import { NETHERLAND } from '../config/images';
+import { DARK_ORANGE } from "../config/styles";
+import { NETHERLAND } from "../config/images";
+
 
 const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 40px;
   width: 100%;
 
   a {
@@ -19,7 +20,7 @@ const StyledHeader = styled.div`
   }
 
   a:hover {
-    color: ${ORANGE};
+    color: ${DARK_ORANGE};
   }
 
   .left-navbar,
@@ -41,15 +42,14 @@ const StyledHeader = styled.div`
   }
 
   .far {
-      font-size: 1.7rem;
-      color: #E4B78B
+    font-size: 1.7rem;
+    color: #e4b78b;
   }
 
   .flag-img {
-      width: 25px;
-      height: 25px;
+    width: 25px;
+    height: 25px;
   }
-  
 `;
 
 const Header = () => (
@@ -71,8 +71,8 @@ const Header = () => (
       <a href="#">SUPPORT</a>
       <a href="#">C. Schulting</a>
       <i className="far fa-heart" />
-      <i className="far fa-clipboard"></i>
-      <img alt ="flag" className="flag-img" src={NETHERLAND} />
+      <i className="far fa-clipboard" />
+      <img alt="flag" className="flag-img" src={NETHERLAND} />
     </div>
   </StyledHeader>
 );

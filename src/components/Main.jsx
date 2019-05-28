@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import girl from '../config/img/girl.png'
+
 const MainStyled = styled.div`
   height: 100vh;
   width: 100%;
@@ -46,11 +48,18 @@ const MainStyled = styled.div`
     padding: 1rem;
     border-bottom: 1px solid black;
   }
+  .girl {
+      width: 100%;
+      ${'' /* height: 100%; */}
+      margin-top: 50px;
+  }
 `;
 
 const Main = () => (
   <MainStyled>
-    <div className="main-left" />
+    <div className="main-left">
+        <img alt="girl" className="girl" src={girl} />
+    </div>
     <div className="main-right">
       <div className="main-toptext">
         <div className="main-text">Discover the</div>
