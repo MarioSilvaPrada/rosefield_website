@@ -4,7 +4,7 @@ import styled from "styled-components";
 import hand from "../config/img/hand.png";
 
 const StyledStory = styled.div`
-  position: absolute;
+  ${'' /* position: absolute; */}
   display: flex;
   justify-content: space-between;
   background: white;
@@ -32,11 +32,6 @@ const StyledStory = styled.div`
     padding: 0 1.5rem 0.7rem 0;
     border-bottom: 1px solid black;
   }
-
-  ${'' /* .hand{
-    width: 800px;
-    height:auto;
-  } */}
 
   .hidden {
     opacity: 0;
