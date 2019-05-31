@@ -7,19 +7,35 @@ import item2 from '../config/img/item2.png';
 
 import ShopItem from './ShopItem';
 
+const items = [
+    {
+        img:`${item1}`,
+        msg:'watches',
+        description: 'The Boxy white sunray - gold',
+        price: 129
+    },
+    {
+        img:`${item2}`,
+        msg:'jewerly',
+        description: 'Double trouble black stone earring',
+        price: 25
+    }
+]
 
 const StyledShop = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 50rem;
+    flex-wrap: wrap;
+    height: 100%;
     background: ${ORANGE}
 `
 
 const Shop = () => (
     <StyledShop>
-        <ShopItem img={item1} msg='watches'/>
-        <ShopItem img={item2} msg='jewerly'/>
+        {items.map(item => {
+            return <ShopItem img={item.img} msg={item.msg} description ={item.description} price={item.price}/>
+        })}
     </StyledShop>
 );
 
