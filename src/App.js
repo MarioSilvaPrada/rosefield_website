@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Story from "./components/Story";
 import Shop from "./components/Shop";
+import Video from "./components/Video";
 
 import { animateHTML } from "./config/animation";
 
@@ -24,6 +25,7 @@ class App extends React.Component {
         <Main />
         <Story />
         <Shop />
+        <Video />
       </div>
     );
   }
