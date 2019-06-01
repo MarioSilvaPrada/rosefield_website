@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import { SOFT_BROWN } from "../config/styles";
 
-
 const StyledShopItem = styled.div`
   width: 25rem;
   height: 32rem;
@@ -13,12 +12,14 @@ const StyledShopItem = styled.div`
   align-items: center;
   background: white;
   margin: 3rem;
-  position:relative;
+  position: relative;
+  
+
 
   .shop-more {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
   }
 
   .item-price {
@@ -33,19 +34,20 @@ const StyledShopItem = styled.div`
     color: ${SOFT_BROWN};
     width: 100%;
   }
+
 `;
 
 const ShopItem = props => (
-  <StyledShopItem>
-  <div className="item-price">
-    <span>{props.description}</span> 
-    <span>€ {props.price}</span>
-  </div>
+  <StyledShopItem >
+    <div className="item-price">
+      <span>{props.description}</span>
+      <span>€ {props.price}</span>
+    </div>
     <img alt="item" src={props.img} />
-    <h2>Shop all {props.msg}</h2>
+    <h2 className="hidden2">Shop all {props.msg}</h2>
     <div className="shop-more">
-        <p>All {props.msg}</p>
-        <p> {props.msg === 'watches' ? 'All straps' : 'All personalized'}</p>
+      <p>All {props.msg}</p>
+      <p> {props.msg === "watches" ? "All straps" : "All personalized"}</p>
     </div>
   </StyledShopItem>
 );
