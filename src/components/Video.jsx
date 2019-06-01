@@ -21,8 +21,9 @@ const StyledVideo = styled.div`
     align-items: flex-end;
     border-bottom: 1px solid white;
     padding: 0 1.5rem 0.7rem 0;
-    margin-left: 8rem;
+    margin-left: 12rem;
     margin-bottom: 3rem;
+
   }
 
   .person {
@@ -30,7 +31,7 @@ const StyledVideo = styled.div`
     flex-direction: column;
     color: white;
     align-self: flex-start;
-    margin-left: 8rem;
+    margin-left: 12rem;
     flex: 1;
     margin-top: 3rem;
   }

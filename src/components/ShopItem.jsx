@@ -39,7 +39,7 @@ const ShopItem = props => (
   <StyledShopItem>
   <div className="item-price">
     <span>{props.description}</span> 
-    <span>{props.price}€</span>
+    <span>€ {props.price}</span>
   </div>
     <img alt="item" src={props.img} />
     <h2>Shop all {props.msg}</h2>
