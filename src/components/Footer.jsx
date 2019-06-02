@@ -15,17 +15,19 @@ const StyledFooter = styled.div`
   }
   .signup-form {
     border-bottom: 1px solid black;
-   
+    width: 20rem;
     display: flex;
     justify-content: space-between;
+    margin-left: 4rem;
   }
 
   .signup {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .signup-text {
+    width: 30rem;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: left;
@@ -76,20 +78,20 @@ const StyledFooter = styled.div`
   @media screen and (max-width: 1200px) {
     .signup {
       flex-direction: column;
+      justify-content: center;
     }
 
-    .signup-text{
+    .signup-text {
       margin-bottom: 2rem;
-      min-width: 20rem;
+      width: 25rem;
+    }
 
+    .signup-form {
+      margin-left: 0;
     }
 
     .contents-column {
       display: none;
-    }
-
-    .signup-form{
-      width: 50%
     }
 
     .contents-column-reduce {
@@ -98,10 +100,9 @@ const StyledFooter = styled.div`
       align-items: flex-start;
       font-size: 0.8rem;
     }
-    .container{
+    .container {
       margin: 0 2.5rem;
     }
-    
   }
 `;
 

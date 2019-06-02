@@ -7,7 +7,7 @@ const StyledStory = styled.div`
   display: flex;
   justify-content: space-between;
   background: white;
-  width: 100%;
+  ${'' /* width: 100%; */}
 
   .story-text {
     display: flex;
@@ -25,6 +25,7 @@ const StyledStory = styled.div`
   }
   .story-text-description {
     line-height: 2rem; 
+    width: 30rem;
   }
   .story-text-discover {
     align-self: flex-start;
@@ -55,8 +56,7 @@ const StyledStory = styled.div`
   @media screen and (max-width: 1200px) {
   justify-content: center;
   height: 50rem;
-  ${'' /* margin-left: 0; */}
-
+  
     .hand {
       display: none;
     }
@@ -76,9 +76,9 @@ const Story = () => (
         meets fashion
       </div>
       <div className="story-text-description">
-        In short, ROSEFIELD watches are a tribute to the great vibes, the <br />
+        In short, ROSEFIELD watches are a tribute to the great vibes, the 
         energy and the tolerance for free thinking that is typical for both
-        <br /> Amsterdam and New York City.
+        Amsterdam and New York City.
       </div>
       <div className="story-text-discover">Discover our products</div>
     </div>
