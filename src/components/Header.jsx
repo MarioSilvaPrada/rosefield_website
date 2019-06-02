@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { DARK_ORANGE } from "../config/styles";
 import { NETHERLAND } from "../config/images";
 
-
 const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -31,6 +30,11 @@ const StyledHeader = styled.div`
     font-size: 0.8rem;
   }
 
+  .left-navbar-reduce,
+  .right-navbar-reduce {
+    display: none;
+  }
+
   .main-title {
     font-size: 1.5rem;
     letter-spacing: 10px;
@@ -41,7 +45,7 @@ const StyledHeader = styled.div`
     font-size: 0.7rem;
   }
 
-  .far {
+  .right-navbar i {
     font-size: 1.7rem;
     color: #e4b78b;
   }
@@ -49,6 +53,23 @@ const StyledHeader = styled.div`
   .flag-img {
     width: 25px;
     height: 25px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    position: static;
+
+    .left-navbar-reduce,
+    .right-navbar-reduce{
+      display: flex;
+      justify-content: space-evenly;
+      width: 20rem;
+      font-size: 2rem;
+    }
+
+    .left-navbar,
+    .right-navbar {
+      display: none;
+    }
   }
 `;
 
@@ -62,6 +83,10 @@ const Header = () => (
       <a href="#">SHOP</a>
       <a href="#">THE LOOK</a>
     </div>
+    <div className="left-navbar-reduce">
+      <i class="fas fa-bars" />
+      <i class="fas fa-search" />
+    </div>
     <div className="title">
       <div className="main-title">ROSEFIELD</div>
       <div className="sec-title">AMS | NYC</div>
@@ -74,6 +99,12 @@ const Header = () => (
       <i className="far fa-clipboard" />
       <img alt="flag" className="flag-img" src={NETHERLAND} />
     </div>
+    <div className="right-navbar-reduce">
+      <i class="far fa-user" />
+      <i className="far fa-clipboard" />
+    </div>
+
+    
   </StyledHeader>
 );
 

@@ -9,23 +9,23 @@ const StyledStory = styled.div`
   justify-content: space-between;
   background: white;
   width: 100%;
+  height: 50rem;
 
   .story-text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 15rem;
     text-align: left;
   }
 
   .story-text :nth-child(1) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .story-text-main {
     font-size: 3rem;
   }
   .story-text-description {
-    line-height: 2rem;
+    line-height: 2rem; 
   }
   .story-text-discover {
     align-self: flex-start;
@@ -51,6 +51,18 @@ const StyledStory = styled.div`
 
   .fadeInRight {
     animation: fadeInRight 2s;
+  }
+
+  @media screen and (max-width: 1200px) {
+  justify-content: center;
+
+    .hand {
+      display: none;
+    }
+
+    .story-text {
+      margin-left: 0;
+    }
   }
 `;
 

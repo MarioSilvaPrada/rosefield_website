@@ -12,11 +12,10 @@ const StyledFooter = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     height: 40rem;
-
   }
   .signup-form {
     border-bottom: 1px solid black;
-    width: 15rem;
+   
     display: flex;
     justify-content: space-between;
   }
@@ -27,12 +26,9 @@ const StyledFooter = styled.div`
   }
 
   .signup-text {
-      font-size: 1.2rem;
-      font-weight: bold;
-      width: 30rem;
-      display: flex;
-      align-items: flex-start;
-
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
   }
 
   .signup input {
@@ -61,6 +57,10 @@ const StyledFooter = styled.div`
     align-items: flex-start;
   }
 
+  .contents-column-reduce {
+    display: none;
+  }
+
   .store-locator {
     border: 1px solid black;
     padding: 1rem 5rem;
@@ -71,6 +71,37 @@ const StyledFooter = styled.div`
     justify-content: space-between;
     color: ${GREY};
     font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .signup {
+      flex-direction: column;
+    }
+
+    .signup-text{
+      margin-bottom: 2rem;
+      min-width: 20rem;
+
+    }
+
+    .contents-column {
+      display: none;
+    }
+
+    .signup-form{
+      width: 50%
+    }
+
+    .contents-column-reduce {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 0.8rem;
+    }
+    .container{
+      margin: 0 2.5rem;
+    }
+    
   }
 `;
 
@@ -116,6 +147,16 @@ const Footer = () => (
           <p>FAQ</p>
           <p>Warranty</p>
           <p>Shipment</p>
+        </div>
+        <div className="contents-column-reduce">
+          <p>+ About us</p>
+          <p>+ Products</p>
+          <p>+ Self-Service</p>
+          <p>+ Questions</p>
+          <p>- Social</p>
+          <p>Facebook</p>
+          <p>Instagram</p>
+          <p>YouTube</p>
         </div>
       </div>
       <div className="rights">

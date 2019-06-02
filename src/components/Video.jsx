@@ -5,14 +5,19 @@ import videoImage from "../config/img/videoImage.png";
 
 const StyledVideo = styled.div`
   background-image: url(${videoImage});
-  height: 60rem;
   width: 100%;
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+
   color: white;
+
+  .container {
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50rem;
+  }
 
   .read-more {
     flex: 1;
@@ -21,9 +26,8 @@ const StyledVideo = styled.div`
     align-items: flex-end;
     border-bottom: 1px solid white;
     padding: 0 1.5rem 0.7rem 0;
-    margin-left: 12rem;
+    ${"" /* margin-left: 12rem; */}
     margin-bottom: 3rem;
-
   }
 
   .person {
@@ -31,7 +35,6 @@ const StyledVideo = styled.div`
     flex-direction: column;
     color: white;
     align-self: flex-start;
-    margin-left: 12rem;
     flex: 1;
     margin-top: 3rem;
   }
@@ -59,20 +62,28 @@ const StyledVideo = styled.div`
     padding: 1.5rem;
     border-radius: 100%;
   }
+
+  @media screen and (max-width: 1200px) {
+    .person {
+      margin-left: 0;
+    }
+  }
 `;
 
 const Video = () => (
   <StyledVideo>
-    <div className="person">
-      <span className="preson-text">15 Minutes with...</span>
-      <span className="person-name">Juliana Salazar</span>
-    </div>
-    <div className="center">
-      {" "}
-      <i class="fas fa-play" />
-    </div>
+    <div className="container">
+      <div className="person">
+        <span className="preson-text">15 Minutes with...</span>
+        <span className="person-name">Juliana Salazar</span>
+      </div>
+      <div className="center">
+        {" "}
+        <i class="fas fa-play" />
+      </div>
 
-    <div className="read-more">Read more</div>
+      <div className="read-more">Read more</div>
+    </div>
   </StyledVideo>
 );
 

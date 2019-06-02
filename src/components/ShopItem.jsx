@@ -35,6 +35,13 @@ const StyledShopItem = styled.div`
     width: 100%;
   }
 
+  @media screen and (max-width: 1200px){
+    .item-price {
+    left: -12.6rem;
+
+    }
+  }
+
 `;
 
 const ShopItem = props => (
