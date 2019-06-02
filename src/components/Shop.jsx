@@ -29,6 +29,7 @@ const StyledShop = styled.div`
   flex-wrap: wrap;
   height: 100%;
   background: ${ORANGE};
+  position: static;
 
   @keyframes fadeInUp {
     from {

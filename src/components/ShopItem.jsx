@@ -13,13 +13,15 @@ const StyledShopItem = styled.div`
   background: white;
   margin: 3rem;
   position: relative;
-  
-
 
   .shop-more {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+  }
+
+  img {
+    width: 17rem;
   }
 
   .item-price {
@@ -30,22 +32,20 @@ const StyledShopItem = styled.div`
     align-items: flex-end;
     top: 13rem;
     left: -14rem;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: ${SOFT_BROWN};
     width: 100%;
   }
 
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     .item-price {
-    left: -12.6rem;
-
+      left: -12.6rem;
     }
   }
-
 `;
 
 const ShopItem = props => (
-  <StyledShopItem >
+  <StyledShopItem>
     <div className="item-price">
       <span>{props.description}</span>
       <span>€ {props.price}</span>

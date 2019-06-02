@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { DARK_ORANGE } from "../config/styles";
+import { ORANGE } from "../config/styles";
 import { NETHERLAND } from "../config/images";
 
 const StyledHeader = styled.div`
@@ -19,13 +19,14 @@ const StyledHeader = styled.div`
   }
 
   a:hover {
-    color: ${DARK_ORANGE};
+    color: ${ORANGE};
   }
 
   .left-navbar,
   .right-navbar {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 500px;
     font-size: 0.8rem;
   }
@@ -47,7 +48,7 @@ const StyledHeader = styled.div`
 
   .right-navbar i {
     font-size: 1.7rem;
-    color: #e4b78b;
+    color: ${ORANGE} ;
   }
 
   .flag-img {
@@ -63,7 +64,7 @@ const StyledHeader = styled.div`
       display: flex;
       justify-content: space-evenly;
       width: 20rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .left-navbar,

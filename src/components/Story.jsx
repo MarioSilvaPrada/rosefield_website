@@ -4,18 +4,17 @@ import styled from "styled-components";
 import hand from "../config/img/hand.png";
 
 const StyledStory = styled.div`
-  ${'' /* position: absolute; */}
   display: flex;
   justify-content: space-between;
   background: white;
   width: 100%;
-  height: 50rem;
 
   .story-text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
+    margin-left: 12rem;
   }
 
   .story-text :nth-child(1) {
@@ -55,6 +54,8 @@ const StyledStory = styled.div`
 
   @media screen and (max-width: 1200px) {
   justify-content: center;
+  height: 50rem;
+  ${'' /* margin-left: 0; */}
 
     .hand {
       display: none;

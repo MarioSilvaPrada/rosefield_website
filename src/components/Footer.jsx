@@ -70,7 +70,7 @@ const StyledFooter = styled.div`
     display: flex;
     justify-content: space-between;
     color: ${GREY};
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   @media screen and (max-width: 1200px) {

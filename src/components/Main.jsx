@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-import girl from '../config/img/girl.png'
+import girl from "../config/img/girl.png";
 
 const MainStyled = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
+  align-items: stretch;
+
+  .tab {
+    width: 100%;
+    height: 3rem;
+    background: #658d92;
+  }
 
   .main-left,
   .main-right {
@@ -49,16 +56,44 @@ const MainStyled = styled.div`
     border-bottom: 1px solid black;
   }
   .girl {
-      width: 100%;
-      ${'' /* height: 100%; */}
-      margin-top: 50px;
+    background: url(${girl}) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .tab {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    height: 60rem;
+
+    .main-left {
+      order: 2;
+      height: 30rem;
+    }
+    .main-right {
+      order: 1;
+      height: 30rem;
+    }
+
+    .girl {
+      margin-top: 0;
+    }
   }
 `;
 
 const Main = () => (
   <MainStyled>
     <div className="main-left">
-        <img alt="girl" className="girl" src={girl} />
+      {/* <img alt="girl" className="girl" src={girl} /> */}
+      <div className="girl">
+        <div className="tab" />
+      </div>
     </div>
     <div className="main-right">
       <div className="main-toptext">
