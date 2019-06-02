@@ -1,6 +1,6 @@
-## Rosefield Website
+## Rosefield Website ⌚
 
-- clone repository and run:
+Clone repository and run:
 
 ```
 npm install
