@@ -51,7 +51,7 @@ const ShopItem = props => (
       <span>€ {props.price}</span>
     </div>
     <img alt="item" src={props.img} />
-    <h2 className="hidden2">Shop all {props.msg}</h2>
+    <h2>Shop all {props.msg}</h2>
     <div className="shop-more">
       <p>All {props.msg}</p>
       <p> {props.msg === "watches" ? "All straps" : "All personalized"}</p>
